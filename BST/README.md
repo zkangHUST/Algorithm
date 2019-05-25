@@ -88,4 +88,16 @@ while y != NIL and x == y.left
 return y
 ```
 
-定理： 在一个高度为h的二叉搜索树中，动态集合上的操作SEARCH、MINNUM、MAXNUM、SUCCESSOR、PREDECESSOR可以在O(h)时间内完成。
+定理： 在一个高度为h的二叉搜索树中，动态集合上的操作`SEARCH`、`MINNUM`、`MAXNUM`、`SUCCESSOR`、`PREDECESSOR`可以在O(h)时间内完成。
+
+## 5. 插入
+
+插入和删除操作将会引起BST的变化。插入节点相对简单，删除节点要复杂一些。
+
+```C
+
+TREE-INSERT(T,z)
+y = NIL
+x = T.root
+while  
+```
