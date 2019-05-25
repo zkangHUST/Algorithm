@@ -11,6 +11,7 @@ if x != NIL
     print x.key
     INORDER-TRAVEL-WALK(x.right)
 ```
+
 前序遍历，后序遍历的算法与此类似，只需要调整一下`print x.key`的位置即可。
 
 ## 2. 查找
@@ -23,7 +24,7 @@ if x == NIl or k == x.key
     return x
 if k < x.key
     return TREE-SEARCH(x.left, k)
-else 
+else  
     return TREE-SEARCH(x.left, k)
 ```
 
@@ -34,7 +35,7 @@ ITERATIVE-TREE-SEARCH(x, k)
 while x != NIL and k != x.key
     if k < x.key
         x = x.left
-    else 
+    else  
         x = x.right
 retutn x
 ```
@@ -88,4 +89,3 @@ return y
 ```
 
 定理： 在一个高度为h的二叉搜索树中，动态集合上的操作SEARCH、MINNUM、MAXNUM、SUCCESSOR、PREDECESSOR可以在O(h)时间内完成。
-
