@@ -1,11 +1,15 @@
-#几种常见的排序算法
-	Z.K.
+# 排序算法总结
 
-	2016.07.30
+## 1. 插入排序
 
-1.插入排序
-
-2.归并排序(分治法)
-
-3.快速排序
-
+```C
+Insert-Sort(A): // A[1...length]
+  for j = 2 to A.length
+    key = A[j]
+    // insert A[j] into the sorted sequence A[1...j-1]
+    i = j - 1
+    while i > 0 and A[i] > key
+      A[i + 1] = A[i]
+      i = i - 1
+    A[i + 1] = key
+```
