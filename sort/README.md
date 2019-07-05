@@ -21,9 +21,18 @@ Insert-Sort(A): // A[1...length]
 ```
 
 ## 2.归并排序
-```
+
+归并排序三个步骤：
+
+- 如果传入的数组长度为1，那么完成
+- 递归排序A[1...n/2] 和A[[n/2]+1...n]
+- 合并两个排序好的数组
+
+时间复杂度：O(nlgn)
+
+```C
 MERGE-SORT(A, p, r):
-  if (p < r)
+  if (p < r)  
     q = (p + r) / 2  //mid
     MERGE-SORT(A, p, r);
     MERGE-SORT(A, q + 1, r);
@@ -45,14 +54,22 @@ MEGRE(A, p, q, r):
     if L[i] <= R[j]
       A[k] = L[i]
       i = i + 1
-    else 
+    else
       A[k] = R[j]
       j = j + 1
 ```
 
-## 2.快速排序
+## 3. 分治法(Divide and Conquer)
 
-```
+分冶法三步骤：
+
+1. 分解子问题
+2. 解决子问题
+3. 合并子问题的解
+
+## 4.快速排序
+
+```C
 QUICKSORT(A, p, r):
 if p < r:
   q = PARTITION(A, p, r)
@@ -77,4 +94,6 @@ A[i+1...j-1]区间内的所有元素均大于x
 A[j...r-1]区间内的所有元素还没有处理完成，可能属于任意情况
 A[r]==x,即为主元
 
-## 3. 堆排序
+## 5. 堆排序
+
+时间复杂度：O(n^2)
