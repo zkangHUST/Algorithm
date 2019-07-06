@@ -12,7 +12,7 @@ int main()
 
 void heap_sort(int* nums, int size)
 {
-    build_max_heap(nums, 10);
+    build_max_heap(nums, size);
     for (int i = size - 1; i > 0; i--) {
         swap(nums[0], nums[i]);
         size -= 1;
